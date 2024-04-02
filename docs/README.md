@@ -89,6 +89,12 @@ Activate the conda environment:
 The software is written intelligently to work with or without GPU support. Two *yml* environment files 
 are provided to facilitate creation of `dmri_seg` conda environment.
 
+* Up to 2021, the [CPU environment](../environment_cpu.yml) built and worked fine.
+* In 2023, the [GPU environment](../environment_gpu.yml) built fine but did not produce a valid mask in
+modern GPUs e.g. NVIDIA RTX 4000, A6000, A100.
+* So now we recommend following the below step-by-step instructions to build an environment that
+successfully generates valid masks on both GPU and CPU devices.
+
    
 ## 2. Conda environment
    
