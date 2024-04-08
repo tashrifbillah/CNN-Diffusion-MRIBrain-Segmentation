@@ -86,15 +86,22 @@ Activate the conda environment:
 
     source ~/miniconda3/bin/activate # should introduce '(base)' in front of each line
 
-The software is written intelligently to work with or without GPU support. Two *yml* environment files 
-are provided to facilitate creation of `dmri_seg` conda environment.
+The software is written intelligently to work with or without GPU support.
 
-* Up to 2021, the [CPU environment](../environment_cpu.yml) built and worked fine.
-* In 2023, the [GPU environment](../environment_gpu.yml) built fine but did not produce a valid mask in
-modern GPUs e.g. NVIDIA RTX 4000, A6000, A100.
-* So now we recommend following the below step-by-step instructions to build an environment that
-successfully generates valid masks on both GPU and CPU devices.
+<details><summary>Old conda environment</summary>
 
+<br>
+  
+We had provided two [*yml* files](../archive/) to facilitate the creation of `dmri_seg` conda environment.
+
+* In the initial stage of this program development in 2020, the [CPU environment](../archive/environment_cpu.yml) built and worked fine.
+  But it does not work anymore.
+* The [GPU environment](../archive/environment_gpu.yml) works fine on older GPUs.
+  But in 2023, it did not produce a valid mask on modern GPUs e.g. NVIDIA RTX 4000, A6000, A100.
+* So now in 2024, we recommend the below step-by-step instructions to build an environment that
+  successfully generates valid masks on both GPU and CPU devices.
+
+</details>
    
 ## 2. Conda environment
    
